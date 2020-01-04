@@ -9,6 +9,6 @@ class LinkedBST:public BinaryTree{
  	~LinkedBST();
  	void preorderTraverse(Node* root1);
  	bool search(int data);
- 	void add(Node* root1,int data);
+ 	void add(Node* root,int data);
 };
 #endif

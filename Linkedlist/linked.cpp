@@ -8,7 +8,7 @@ LinkedBST::~LinkedBST(){
 
 }
 void LinkedBST::add(Node* root,int data){
-	if (root==NULL){
+	if (root->data==-1){
 		root->data=data;
 	}
 	else{
@@ -67,11 +67,11 @@ void LinkedBST::preorderTraverse(Node* root){
 	if(root==NULL){
 		cout<<"There is no value to show"<<endl;
 	}
-	cout<<root->data<<endl;
+		cout<<root->data<<endl;
 	if(root->left!=NULL){
 		preorderTraverse(root->left);
 	}
-	else if(root->right!=NULL){
+	if(root->right!=NULL){
 		preorderTraverse(root->right);
 	}
 	

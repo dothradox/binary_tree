@@ -3,9 +3,14 @@
 
 class Node{
 public:
-	int data;
+	int data=0;
 	Node* left;
 	Node* right;
+    friend class LinkedBST;
+        Node(){
+            data=-1;
+            left=right=NULL;
+        }  
 };
 class BinaryTree{
     public:

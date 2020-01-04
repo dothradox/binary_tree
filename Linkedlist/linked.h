@@ -1,18 +1,14 @@
 #ifndef LINKED_H
 #define LINKED_H
 #include "binary.h"
-class Node{
-	int data;
-	Node* left;
-	Node* right;
-};
+
 class LinkedBST:public BinaryTree{
- private:
- 	Node* root;
  public:
+ 	Node* root=new Node();
  	LinkedBST();
  	~LinkedBST();
- 	void preorderTraverse();
+ 	void preorderTraverse(Node* root1);
  	bool search(int data);
- 	void add( Node* root,int data);
+ 	void add(Node* root1,int data);
 };
+#endif

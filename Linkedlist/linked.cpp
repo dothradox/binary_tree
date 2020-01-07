@@ -4,15 +4,16 @@
 using namespace std;
 
 LinkedBST::LinkedBST(){
-
+	root=NULL;
 }
 LinkedBST::~LinkedBST(){
 
 }
-void LinkedBST::add(Node *root,int data){
-	if (valid==-1){
-		root->data=data;
-		valid=valid+1;
+void LinkedBST::add(Node* root,int data){
+	if (root==NULL){
+		Node* new_Node=new Node();
+		new_Node->data=data;
+		this->root=new_Node;
 	}
 	else{
 		if(data > root->data)
@@ -42,8 +43,8 @@ void LinkedBST::add(Node *root,int data){
 }
 
 bool LinkedBST::search(int data){
-    if(valid==-1){
-        std::cout<<"It is a Null tree"<<std::endl;
+    if(root==NULL){
+        cout<<"It is a Null tree"<<endl;
     }
     else{
         Node *p=new Node();
@@ -67,7 +68,7 @@ bool LinkedBST::search(int data){
 }
 
 void LinkedBST::preorderTraverse(Node* root){
-	if(valid==-1){
+	if(root==NULL){
 		cout<<"There is no value to show"<<endl;
 		return;
 	}

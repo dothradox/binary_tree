@@ -4,7 +4,7 @@
 
 class LinkedBST:public BinaryTree{
  public:
-	int valid=-1;
+ 	Node* root=new Node();
  	LinkedBST();
  	~LinkedBST();
  	void preorderTraverse(Node* root);

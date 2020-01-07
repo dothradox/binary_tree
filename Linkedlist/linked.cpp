@@ -1,15 +1,18 @@
 #include <iostream>
 #include "linked.h"
+#include "binary.h"
 using namespace std;
 
 LinkedBST::LinkedBST(){
+
 }
 LinkedBST::~LinkedBST(){
 
 }
-void LinkedBST::add(Node* root,int data){
-	if (root->data==-1){
+void LinkedBST::add(Node *root,int data){
+	if (valid==-1){
 		root->data=data;
+		valid=valid+1;
 	}
 	else{
 		if(data > root->data)
@@ -39,7 +42,7 @@ void LinkedBST::add(Node* root,int data){
 }
 
 bool LinkedBST::search(int data){
-    if(root==NULL){
+    if(valid==-1){
         std::cout<<"It is a Null tree"<<std::endl;
     }
     else{
@@ -64,8 +67,9 @@ bool LinkedBST::search(int data){
 }
 
 void LinkedBST::preorderTraverse(Node* root){
-	if(root==NULL){
+	if(valid==-1){
 		cout<<"There is no value to show"<<endl;
+		return;
 	}
 		cout<<root->data<<endl;
 	if(root->left!=NULL){

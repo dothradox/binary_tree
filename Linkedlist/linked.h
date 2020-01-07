@@ -4,10 +4,10 @@
 
 class LinkedBST:public BinaryTree{
  public:
- 	Node* root=new Node();
+	int valid=-1;
  	LinkedBST();
  	~LinkedBST();
- 	void preorderTraverse(Node* root1);
+ 	void preorderTraverse(Node* root);
  	bool search(int data);
  	void add(Node* root,int data);
 };

@@ -10,5 +10,7 @@ class LinkedBST:public BinaryTree{
  	void preorderTraverse(Node* root);
  	bool search(int data);
  	void add(Node* root,int data);
+	int max(Node* root);
+	int min(Node* root);
 };
 #endif

@@ -16,6 +16,8 @@ class BinaryTree{
         virtual void preorderTraverse(Node* root)=0;
         virtual void add(Node* root,int data)=0;
         virtual bool search(int data)=0;
+        virtual int max(Node* root)=0;
+        virtual int min(Node* root)=0;
 };
 
 #endif

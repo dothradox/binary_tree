@@ -81,3 +81,29 @@ void LinkedBST::preorderTraverse(Node* root){
 	}
 	
 }
+int LinkedBST::max(Node* root){
+	if(root==NULL)
+	{
+		cout<<"the tree is empty"<<endl;
+		return 0;
+	}
+	if(root->right==NULL){
+		return root->data;
+	}
+	else{
+		max(root->right);
+	}
+}
+int LinkedBST::min(Node* root){
+	if(root==NULL)
+	{
+		cout<<"the tree is empty"<<endl;
+		return 0;
+	}
+	if(root->left==NULL){
+		return root->data;
+	}
+	else{
+		min(root->left);
+	}
+}

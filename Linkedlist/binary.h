@@ -18,6 +18,8 @@ class BinaryTree{
         virtual bool search(int data)=0;
         virtual int max(Node* root)=0;
         virtual int min(Node* root)=0;
+        virtual void deleteBST(Node* root, int keytoDelete)=0;
+        virtual void inorderTraverse(Node* root)=0;
 };
 
 #endif

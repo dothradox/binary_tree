@@ -12,5 +12,7 @@ class LinkedBST:public BinaryTree{
  	void add(Node* root,int data);
 	int max(Node* root);
 	int min(Node* root);
+	void deleteBST(Node* root,int keytoDelete);
+	void inorderTraverse(Node* root);
 };
 #endif
